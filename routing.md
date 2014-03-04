@@ -26,7 +26,7 @@ a aplikacija u kontroleru sadrži sljedeći kod:
 
 i ovo je odgovarajući view kod:
 
-<pre><code><%= link_to 'Patient Record', patient_path(@patient) %></code></pre>
+    <%= link_to 'Patient Record', patient_path(@patient) %>
 
 ruter će generisati putanju <code>/patients/17</code>.
 
@@ -38,7 +38,7 @@ Resurs rutiranje (*engl.* resource routing) omogućava brzo deklarisanje svih ru
 
 ## 2 Resursi na mreži
 
-Browser-i zahtijevaju strane od Railsa praveći zahtjev za URL koristeći određeni HTTP metod, kao <code>GET</code>, <code>POST</code>, <code>PATCH</code>, <code>PUT</code> i <code>DELETE</code>. Svaki metod je zahtjev za izvođenje operacije na resursu. Resurs ruta mapira broj određenih zajteva sa akcijama u jednom kontroleru.
+Browser-i zahtijevaju strane od Railsa praveći zahtjev za URL adresama koristeći određeni HTTP metod, kao <code>GET</code>, <code>POST</code>, <code>PATCH</code>, <code>PUT</code> i <code>DELETE</code>. Svaki metod je zahtjev za izvođenje operacije na resursu. Resurs ruta mapira određen broj zahtjeva sa akcijama u jednom kontroleru.
 
 Kada Rails aplikacija primi zahtjeva za:
 
@@ -48,7 +48,7 @@ pita rutera da isto spoji sa nekom kontroler akcijom. Ako je prva spojena ruta:
 
 <pre><code>resources :photos</code></pre>
 
-Rails bi poslao ovaj zahtjev destroy metodi photos kontroleru sa { id: '17' } u parametrima.
+Rails bi poslao ovaj zahtjev destroy metodi, photos kontroleru sa { id: '17' } u parametrima.
 
 ## 2.2 CRUD, glagoli i akcije
 
